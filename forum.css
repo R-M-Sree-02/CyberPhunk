@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ProximaNova', 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', sans-serif;
+}
+
+:root {
+    --icon-back: rgb(63, 64, 76);
+    --dark-back: #292932f5;
+    --letter-color: #c6c6cb;
+    --hover-color: rgb(165, 171, 175);
+    --item-back: rgba(45, 46, 53, 0.6);
+    --item-letter: #a3a3a5;
+}
+
+body {
+    background-image: url(Images/forum-back.jpg);
+    background-position: top;
+    background-size: cover;
+}
+
+header {
+    padding: 4em 42em;
+    color: #a5abaf;
+    background: url(Images/forum-header.jpg);
+    background-position: top;
+    height: 12em;
+    width: 100%;
+}
+
+
+header img {
+    filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 1)) drop-shadow(0 8px 20px rgba(0, 0, 0, 0.7)) brightness(1.5);
+}
+
+main {
+    width: 100%;
+    height: auto;
+    padding: 5em 15em;
+}
+
+.option-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    align-items: center;
+    justify-content: center;
+}
+
+.option-box {
+    background-color: var(--dark-back);
+    color: var(--letter-color);
+    width: fit-content;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-radius: 5px;
+    width: 13em;
+}
+
+
+i {
+    padding: .7em .8em;
+    background-color: var(--icon-back);
+    font-size: 1.5em;
+    border-radius: 5px 0 0 5px;
+}
+
+.radar {
+    padding: 1.1em 1.2em !important;
+    background-image: url(Images/icons8-radar-48.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.option-box div {
+    text-align: center;
+    width: 100%;
+}
+
+.option-box:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+    color: var(--dark-back);
+}
+
+.option-box:hover i,.heading i:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+    color: var(--dark-back);
+}
+
+.content {
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    margin-top: 1em;
+    padding: 1%;
+}
+
+.heading {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--letter-color);
+}
+
+.heading p {
+    font-size: xx-large;
+}
+
+.page-num {
+    word-spacing: 15px;
+    font-size: medium;
+    color: var(--letter-color);
+    margin: 10px 0;
+}
+
+.page-num p:hover,.filter p:hover{
+    font-weight: 900;
+    cursor: pointer;
+    color: white;
+}
+
+.filter {
+    width: 100%;
+    padding: 10px 20px;
+    text-align: right;
+    color: var(--letter-color);
+    background-color: var(--icon-back);
+}
+
+.items {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--item-back);
+    text-transform: capitalize;
+    color: var(--item-letter);
+}
+
+.items p {
+    font-size: larger;
+
+}
+
+.content-title {
+    width: 60%;
+}
+
+.icon {
+    width: 5%;
+    height: 2.5em;
+    margin: 0 10px;
+    background-image: url(Images/rarog-icon.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.comment,
+.views {
+    width: 10%;
+}
+
+.items i {
+    background-color: transparent !important;
+    padding: 8px !important;
+}
+
+.views img {
+    width: 2em;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.comment p,
+.views p {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.time {
+    width: 15%;
+    text-align: right;
+}
+
+.empty{
+    width: 5%;
+    height: 2.5em;
+    margin: 0 10px;
+}
+
+footer{
+    text-align: center;
+    color: #fff;
+    font-size: larger;
+    border-bottom: 1px solid var(--item-letter);
+}
+
+
+footer img{
+    margin: 4% 1%;
+    width: 8%;
+}
+
+.content-title:hover,
+.time:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.items:hover{
+    background-color: var(--icon-back);
+}
+
+a{
+    text-decoration: none;
+    color: var(--item-letter);
+    font-size: medium;
+
+}

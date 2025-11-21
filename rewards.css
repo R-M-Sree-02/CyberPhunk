@@ -1,0 +1,636 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    font-family: myfont1;
+}
+
+:root {
+    --letter-color: #fcee0a;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+}
+
+@font-face {
+    font-family: myfont1;
+    src: url(Fonts/BlenderPro-Book.ttf);
+}
+
+@font-face {
+    font-family: myfont2;
+    src: url(Fonts/Refinery-25-Bold.ttf);
+}
+
+header {
+    background: linear-gradient(to top, rgba(0, 0, 0, .89) 10%, rgba(0, 0, 0, 0)), url(Images/rewards-page.jpg);
+    filter: brightness(1.8);
+    width: 100%;
+    height: 65rem;
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    display: flex;
+    padding: .5em 1em;
+    margin: 0.7em 0.2em;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+nav img {
+    filter: drop-shadow(0 5px 14px rgba(0, 0, 0, .4)) drop-shadow(0 8px 20px rgba(0, 0, 0, .3));
+}
+
+.option {
+    clip-path: polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%, 0% 20px);
+    height: 46px;
+    padding: 0 .3em 1em;
+    border: 1.5px solid yellow;
+    background-color: rgba(0, 0, 0, 0.55);
+    padding-right: 0;
+}
+
+.option ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.option li {
+    margin: .5em 1.8em;
+    font-size: 1.3em;
+}
+
+.option ul li:last-child {
+    background-color: yellow;
+    padding: 11px 30px;
+    margin: 0;
+    font-weight: 800;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li:hover a {
+    font-weight: 900;
+    color: yellow;
+}
+
+.padding-box {
+    padding-top: 40rem;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.padding-box a {
+    color: var(--letter-color) !important;
+}
+
+.box {
+    background: url("Images/yellow-box.svg") no-repeat;
+    height: 3rem;
+    padding: .8rem 2rem;
+}
+
+.padding-box p {
+    vertical-align: middle;
+    margin: 1rem .3rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.padding-box img {
+    vertical-align: middle;
+    margin: -0.3rem 3rem 0 .5rem;
+}
+
+.point {
+    width: max-content;
+    margin-top: 2rem;
+}
+
+
+/* ----------------------main---------------------------------- */
+
+.black-space {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: url(Images/cross-25.png), url(Images/graffiti-1.png), linear-gradient(to top, black 95%, rgba(0, 0, 0, 0));
+    background-repeat: repeat, no-repeat, no-repeat;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    z-index: 1;
+    top: -10rem;
+    padding-top: 7rem;
+}
+
+.intro h2 {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+}
+
+.intro p {
+    font-size: 1.3rem;
+}
+
+.intro-separator {
+    background: linear-gradient(90deg, #fff 28px, #0000 0, #0000 calc(50% - 14px), #fff calc(50% - 14px), #fff calc(50% + 14px), #0000 calc(50% + 14px), #0000 calc(100% - 28px), #fff calc(100% - 28px), #fff), linear-gradient(90deg, #fff 2px, #0000 0, #0000 calc(50% - 1px), #fff calc(50% - 1px), #fff calc(50% + 1px), #0000 calc(50% + 1px), #0000 calc(100% - 2px), #fff calc(100% - 2px), #fff);
+    background-size: 100% 2px, 100% 28px;
+    height: 28px;
+    margin-top: 3rem;
+    transform: rotate(180deg);
+    width: 40%;
+    background-repeat: no-repeat;
+}
+
+.game-swag h2 {
+    margin-top: 6rem;
+    font-size: 3rem;
+}
+
+.game-swag p {
+    font-size: 1.8rem;
+    letter-spacing: 0.15rem;
+    font-weight: 800;
+    margin-top: 2.7rem;
+}
+
+.reward {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    width: 80%;
+    margin-top: 3rem;
+}
+
+.reward img {
+    height: min-content;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.reward div {
+    width: 17%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+}
+
+.reward h2 {
+    font-size: 1.7rem;
+}
+
+.reward p {
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    margin: 1rem 0 2rem;
+}
+
+.reward-4 {
+    margin-top: 5.2rem;
+    height: 17rem !important;
+}
+
+.little-line {
+    height: 1px;
+    width: 10%;
+    border: 1px solid white;
+}
+
+.available-reward {
+    font-size: 2rem;
+    margin-top: 5rem;
+}
+
+hr {
+    width: 93%;
+    margin: 5rem 0;
+    height: 1px;
+    background-color: rgb(255 255 255 / 38%);
+    border: none;
+}
+
+.digital h1 {
+    font-size: 2.7rem;
+    letter-spacing: .1rem;
+    margin-top: 2rem;
+}
+
+.digital p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+#goodies {
+    padding: 2rem 0 12rem !important;
+}
+
+.yellow-goodies {
+    width: 92%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin: 4rem 0 6rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: max-content;
+    color: var(--letter-color);
+    display: flex;
+    text-align: left;
+}
+
+.icon img {
+    width: 6rem;
+}
+
+.icon h2 {
+    font-size: 1.3rem;
+    margin: 0.9rem 0.7rem;
+    font-weight: 900;
+}
+
+.icon span {
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+#red {
+    color: #fd0130 !important;
+    margin-bottom: 5rem;
+}
+
+.separator {
+    background: url(Images/yellow-back.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    margin-top: -3rem;
+    height: 2.3rem;
+    width: 100%;
+}
+
+/* -----------------------------yellow-space------------------------------- */
+
+.yellow-space {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--letter-color);
+    margin-top: -10rem;
+}
+
+.yellow-heading {
+    margin: 5rem;
+}
+
+.yellow-space h1 {
+    font-size: 3rem;
+    letter-spacing: .1rem;
+}
+
+.yellow-space h3 {
+    font-size: 2rem;
+    letter-spacing: .1rem;
+}
+
+.platform-separator-top {
+    background: linear-gradient(90deg, #000 28px, #0000 0, #0000 calc(50% - 14px), #000 calc(50% - 14px), #000 calc(50% + 14px), #0000 calc(50% + 14px), #0000 calc(100% - 28px), #000 calc(100% - 28px), #000), linear-gradient(90deg, #000 2px, #0000 0, #0000 calc(50% - 1px), #000 calc(50% - 1px), #000 calc(50% + 1px), #0000 calc(50% + 1px), #0000 calc(100% - 2px), #000 calc(100% - 2px), #000);
+    background-size: 100% 2px, 100% 28px;
+    height: 28px;
+    width: 55%;
+    background-repeat: no-repeat;
+}
+
+.platform-icon {
+    width: 55%;
+    height: 10rem;
+    margin: 3rem;
+    border: .5px solid black;
+    display: flex;
+
+}
+
+.icon-back {
+    border: .5px solid black;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80px auto;
+}
+
+/* .icon-back img {
+    width: 50%;
+} */
+
+.gog {
+    background-image: url(Images/logo-gog-black.svg);
+}
+
+.steam {
+    background-image: url(Images/logo-steam-black.svg);
+}
+
+.epic {
+    background-image: url(Images/logo-epic-black.svg);
+}
+
+.xbox {
+    background-image: url(Images/logo-xbox-black.svg);
+}
+
+.ps4 {
+    background-image: url(Images/logo-ps4-black.svg);
+}
+
+.switch {
+    background-image: url(Images/logo-switch2-black.svg);
+}
+
+.mac {
+    background-image: url(Images/logo-mac-black.svg);
+}
+
+.icon-back:hover {
+    background-color: #000;
+    cursor: pointer;
+}
+
+.gog:hover {
+    background-image: url(Images/logo-gog-white.svg);
+}
+
+.steam:hover {
+    background-image: url(Images/logo-steam-white.svg);
+}
+
+.epic:hover {
+    background-image: url(Images/logo-epic-white.svg);
+}
+
+.xbox:hover {
+    background-image: url(Images/logo-xbox-white.svg);
+}
+
+.ps4:hover {
+    background-image: url(Images/logo-ps4-white.svg);
+}
+
+.switch:hover {
+    background-image: url(Images/logo-switch2-white.svg);
+}
+
+.mac:hover {
+    background-image: url(Images/logo-mac-white.svg);
+}
+
+.num-box {
+    border: 2px solid black;
+    padding: .5rem 1rem;
+    font-size: 2rem;
+    margin: 2rem 0 1rem;
+}
+
+.align-p-left {
+    width: 52%;
+    text-align: left;
+}
+
+.align-p-left h4 {
+    font-size: 1.3rem;
+    letter-spacing: .08rem;
+    font-weight: 900;
+    margin: 1rem 0;
+}
+
+.align-p-left p,
+.align-p-left img {
+    vertical-align: middle;
+    font-size: 1.3rem;
+}
+
+.align-p-left a {
+    text-decoration: underline;
+    color: black;
+}
+
+.platform-separator-bottom {
+    background: linear-gradient(90deg, #000 28px, #0000 0, #0000 calc(50% - 14px), #000 calc(50% - 14px), #000 calc(50% + 14px), #0000 calc(50% + 14px), #0000 calc(100% - 28px), #000 calc(100% - 28px), #000), linear-gradient(90deg, #000 2px, #0000 0, #0000 calc(50% - 1px), #000 calc(50% - 1px), #000 calc(50% + 1px), #0000 calc(50% + 1px), #0000 calc(100% - 2px), #000 calc(100% - 2px), #000);
+    background-size: 100% 2px, 100% 28px;
+    height: 28px;
+    width: 100%;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    margin: 2rem 0 6rem;
+}
+
+
+/* -----------------------------black-bottom--------------------------- */
+
+.bottom-black-space {
+    background-color: #000;
+    background-image: url(Images/graffiti-yellow.png), url(Images/game-sperator.svg);
+    background-position: top right, top left;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 5rem 0;
+}
+
+.bottom-black-content {
+    width: 55%;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 1rem auto;
+}
+
+.bottom-black-content h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+/* ------------------------detail------------------------- */
+
+.answer {
+    margin: 3rem 0;
+}
+
+
+.answer summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+.arrow-box {
+    padding: .3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    margin-right: 1.2rem;
+}
+
+.arrow {
+    width: 1.3rem;
+    height: 1.3rem;
+    background-image: url('Images/white-arrow.png');
+    background-size: contain;
+    transition: transform 0.3s ease;
+}
+
+.answer[open] .arrow {
+    transform: rotate(90deg);
+}
+
+
+.answer p {
+    font-size: 1.2rem;
+    margin-left: 3.2rem;
+}
+
+
+/* ---------------------footer------------------------------ */
+
+
+
+.available {
+    background-color: black;
+    padding: 2vw 10vw;
+    width: 100%;
+}
+
+.seperator-black {
+    transform: rotate(180deg);
+    background: url(Images/black-back.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    margin-top: -2em;
+    height: 3em;
+}
+
+.social-media {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 1em 0;
+}
+
+.apps h2 {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2em;
+    margin: .5em;
+}
+
+.apps img {
+    margin: .3em;
+    vertical-align: middle;
+    width: 2.5em;
+}
+
+.partner img {
+    margin: 1em;
+    vertical-align: middle;
+}
+
+.partner img:last-child {
+    width: 10em;
+}
+
+.terms {
+    border-top: 1.5px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.15);
+    padding: .5em;
+    margin: 1em 0 1.8em 0;
+}
+
+.terms a {
+    color: #00f0ff;
+    font-size: large;
+    display: inline-block;
+    margin: 1.2em;
+    font-weight: 600;
+}
+
+.terms img {
+    width: 1em;
+    height: 1.2em;
+    vertical-align: middle;
+    margin: .3em;
+    margin-top: -.1em;
+}
+
+
+.copy-right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copy-right div:first-child img {
+    width: 10em;
+    /* vertical-align: middle; */
+    margin: 0 1.8em;
+}
+
+.copy-right p {
+    font-size: small;
+    color: rgba(245, 245, 245, 0.8);
+    max-width: 37em;
+    display: inline-block;
+    /* vertical-align: middle; */
+    line-height: 1.5em;
+}
+
+.copy-right div:last-child img {
+    width: 6em;
+    margin: 0 1.5em;
+    vertical-align: middle;
+    padding-bottom: 1em;
+}
+
+.copy-right div:last-child p {
+    margin-left: -8.5em;
+}

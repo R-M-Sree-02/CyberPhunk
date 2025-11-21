@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="profile-card.css">
+</head>
+
+<body>
+    <header>
+        <p>html & css project presentation</p>
+        <p>cyberpunk</p>
+    </header>
+
+    <!-- -----------------------bio------------------------ -->
+    <div id="bio" class="active inactive">
+        <div class="back"></div>
+        <div class="slanted-top"></div>
+        <img src="user-thumbnail.png">
+        <p class="name">m. sree shanmuga kumar</p>
+        <p>zs student</p>
+    </div>
+
+
+
+    <!-- -------------------------learned----------------------------- -->
+    <div id="learned" class="inactive ">
+        <h2>lessons learnt</h2>
+        <p>⊛ How websites are built using HTML and CSS</p>
+
+        <p>⊛ How the structure of a webpage and its layouts works</p>
+
+        <p>⊛ Using browser tools to test and fix designs</p>
+
+        <p>⊛ to create forms and get input </p>
+
+        <p>⊛ how to set the images and contents using flex and grid</p>
+        <div class="bottom-slanded-left"></div>
+        <div class="bottom-slanded-right"></div>
+    </div>
+
+
+
+    <!-- /=---------------------------------challenges---------------------------=/ -->
+    <div id="challenges" class="inactive ">
+        <h2>challenges faced</h2>
+        <p>⊛ adjusting the video</p>
+
+        <p>⊛ give the names for class</p>
+
+        <p>⊛ avoid the overlapping content</p>
+
+        <p>⊛ get the exact font</p>
+
+        <p>⊛ using the onclick method</p>
+
+        <p>⊛ align items</p>
+
+        <div class="bottom-slanded-left"></div>
+        <div class="bottom-slanded-right"></div>
+    </div>
+
+
+
+
+    <!-- ------------------------gratitude----------------------- -->
+    <div id="gratitude" class="inactive ">
+        <h2>gratitude</h2>
+        <h3>thanks to all my friends and faculty.</h3>
+        <a href="http://127.0.0.1:5500/Home%20Page.html">PROJECT</a>
+        <div class="bottom-slanded-left"></div>
+        <div class="bottom-slanded-right"></div>
+    </div>
+
+
+
+    <!-- -----------------------option-------------------- -->
+
+
+    <div class="options">
+        <div class="inside">
+            <p onclick="showSection('bio')">about</p>
+            <p onclick="showSection('learned')">lessons learnt</p>
+            <p onclick="showSection('challenges')">challenges faced</p>
+            <p onclick="showSection('gratitude')">gratitude</p>
+    
+<!----------------------------- Duplicate--------------------------------->
+            <p onclick="showSection('bio')">about</p>
+            <p onclick="showSection('learned')">lessons learnt</p>
+            <p onclick="showSection('challenges')">challenges faced</p>
+            <p onclick="showSection('gratitude')">gratitude</p>
+        </div>
+    </div>
+    
+</body>
+<script>
+    function showSection(active) {
+        document.querySelectorAll('.active').forEach(sec => {
+            sec.classList.remove('active');
+        });
+        document.getElementById(active).classList.add('active');
+    }
+</script>
+
+</html>
