@@ -535,9 +535,6 @@ form div p {
         background-position: top;
     }
 
-    header video {
-        aspect-ratio: 1/1;
-    }
 
     .wing-container {
         max-width: 30em;
