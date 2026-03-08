@@ -4,6 +4,8 @@
     box-sizing: border-box;
     /* overflow-x: hidden; */
     font-family: myfont1;
+    transition: .4s;
+
 }
 
 @font-face {
@@ -637,7 +639,7 @@ form div p {
 #char-4 p:last-child,
 #char-5 p:last-child {
     visibility: hidden;
-    transition-duration: .5s;
+    transition-duration: .5s !important;
     transform: scale(0);
     position: relative;
     font-size: medium;

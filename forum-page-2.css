@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: myfont1;
+    transition: .4s;
+
 }
 
 @font-face {

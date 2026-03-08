@@ -4,6 +4,8 @@
     box-sizing: border-box;
     /* overflow: hidden; */
     font-family: myfont1;
+    transition: .4s;
+
 }
 
 @font-face {

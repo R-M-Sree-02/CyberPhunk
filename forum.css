@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'ProximaNova', 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', sans-serif;
+    transition: .4s;
 }
 
 :root {

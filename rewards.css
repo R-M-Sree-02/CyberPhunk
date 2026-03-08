@@ -4,6 +4,7 @@
     box-sizing: border-box;
     /* overflow: hidden; */
     font-family: myfont1;
+    transition: .4s;
 }
 
 :root {
@@ -513,7 +514,7 @@ hr {
     height: 1.3rem;
     background-image: url('Images/white-arrow.png');
     background-size: contain;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease !important;
 }
 
 .answer[open] .arrow {
